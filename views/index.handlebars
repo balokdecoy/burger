@@ -1,6 +1,6 @@
 <h1>Devour a Vegan Burger!</h1>
 
-<h2>Burgers that are not devoured!</h2>
+<h2>Vegan burgers you can eat!</h2>
 
 <ul>
   {{#each burgers}}
@@ -10,7 +10,7 @@
   {{/each}}
 </ul>
 
-<h2>Devoured burgers!</h2>
+<h2>Devoured vegan burgers!</h2>
 
 <ul>
   {{#each burgers}}
@@ -29,9 +29,9 @@
   </div>
 
   <div class="form-group">
-    <label for="sleepy">Devoured?</label><br>
+    <label for="devoured">Devoured?</label><br>
     <input type="radio" name="devoured" value="1" id="devoured" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0" id="add"> Add a burger!
+    <input type="radio" name="devoured" value="0" id="add"> Ready to eat!
   </div>
 
   <button type="submit">Add Burger</button>
