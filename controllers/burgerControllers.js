@@ -50,4 +50,4 @@ router.delete('/api/burgers/:id', (req, res) => {
     });
 });
 
-module.expoerts = router;
+module.exports = router;
