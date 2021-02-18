@@ -1,38 +1,46 @@
-<h1>Devour a Vegan Burger!</h1>
+<div class="container">
+  <h1>Devour a Vegan Burger!</h1>
+  <div class="row">
+     <div class="col-6">
+      <h2>Vegan burgers you can eat!</h2>
 
-<h2>Vegan burgers you can eat!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> burgers/burger-block devoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Devoured vegan burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> burgers/burger2-block}}
-  {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form id="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+      {{/unless}}
+      {{/each}}
+    </ul>
   </div>
 
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" id="devoured" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0" id="add"> Ready to eat!
+  <div class="col-6">
+    <h2>Devoured!</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger2-block}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
   </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+  <h2 class="addTitle">Add a Burger</h2>
+  <form id="create-form">
+
+    <div class="form-group">
+      <label for="ca"></label>
+      <input type="text" id="ca" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="devoured">Eat now or later?</label><br>
+      <input type="radio" name="devoured" value="1" id="devoured" checked> Now!<br>
+      <input type="radio" name="devoured" value="0" id="add"> Later!
+    </div>
+    <div class="center-btn">
+        <button type="submit">Add Burger</button>
+    </div>
+  </form>
+</div>
