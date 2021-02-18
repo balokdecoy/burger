@@ -4,6 +4,7 @@
   "description": "An application utilizing express-handlebars, MySQL, Node.js, and object-relational mapping.",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "npm test"
   },
   "repository": {
